@@ -6,9 +6,36 @@
             "x": 0,
             "y": 0,
             "uniqueID": 832912,
-            "ioValues": [],
+            "ioValues": [
+                {
+                    "name": "Geometry",
+                    "ioValue": 10
+                }
+            ],
             "topLevel": true,
             "allAtoms": [
+                {
+                    "atomType": "Input",
+                    "name": "Geometry",
+                    "x": 0.06734992679355783,
+                    "y": 0.48275862068965514,
+                    "uniqueID": 204003,
+                    "ioValues": []
+                },
+                {
+                    "atomType": "Code",
+                    "name": "Code",
+                    "x": 0.3111273792093704,
+                    "y": 0.4597701149425288,
+                    "uniqueID": 217485,
+                    "ioValues": [
+                        {
+                            "name": "Input1",
+                            "ioValue": 10
+                        }
+                    ],
+                    "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(Input1){\n  return Input1.op(s => s.wireframeFaces(f => f.interior().grow(-0.01)).with(s.openEdges().color('red')));        //return must be geometry;\n}\n\nreturn main(Input1)"
+                },
                 {
                     "atomType": "Output",
                     "name": "Output",
@@ -17,7 +44,21 @@
                     "ioValues": []
                 }
             ],
-            "allConnectors": [],
+            "allConnectors": [
+                {
+                    "ap1Name": "number or geometry",
+                    "ap2Name": "Input1",
+                    "ap2Primary": false,
+                    "ap1ID": 204003,
+                    "ap2ID": 217485
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 217485
+                }
+            ],
             "fileTypeVersion": 1
         }
     ],
